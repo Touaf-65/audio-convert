@@ -44,8 +44,11 @@ export function onLocaleChange(listener: () => void): void {
   listeners.add(listener);
 }
 
-export function t(key: MessageKey): string {
-  return dictionaries[current][key];
+/** Traduit une clé ; les marqueurs `{nom}` sont remplacés par `params.nom`. */
+export function t(key: MessageKey, params: Record<string, string | number> = {}): string {
+  return dictionaries[current][key].replace(/\{(\w+)\}/g, (match, name: string) =>
+    name in params ? String(params[name]) : match,
+  );
 }
 
 /** Remplit tous les éléments portant un attribut `data-i18n` avec leur traduction. */
