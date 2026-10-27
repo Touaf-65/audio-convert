@@ -42,3 +42,9 @@ npm run dev
 ## Déploiement
 
 Le fichier `netlify.toml` contient la configuration de build. Il suffit de connecter le dépôt GitHub à Netlify : chaque push sur `main` déclenche un déploiement.
+
+## Licence
+
+Ce projet est distribué sous licence [GNU GPL v3 ou ultérieure](LICENSE).
+
+Il embarque [ffmpeg.wasm](https://github.com/ffmpegwasm/ffmpeg.wasm), dont le cœur (`@ffmpeg/core`) est sous licence GPL-2.0 ou ultérieure ; la GPL-3.0 est compatible avec cette licence.
