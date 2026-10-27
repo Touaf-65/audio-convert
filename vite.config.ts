@@ -6,6 +6,6 @@ export default defineConfig({
     exclude: ["@ffmpeg/ffmpeg", "@ffmpeg/util"],
   },
   build: {
-    target: "es2022",
+    target: "es2023",
   },
 });
