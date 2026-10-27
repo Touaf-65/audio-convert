@@ -4,6 +4,19 @@ Convertisseur de formats audio qui fonctionne **entièrement dans le navigateur*
 
 Interface disponible en français et en anglais.
 
+## Formats
+
+- **En entrée** : tout ce que ffmpeg sait lire (MP3, AAC/M4A, Ogg, Opus, FLAC, ALAC, WAV, AIFF, WMA, APE, WavPack, AC-3…), y compris la piste audio des vidéos (MP4, MKV, MOV, WebM).
+- **En sortie** :
+
+| Format | Type | Réglage |
+|---|---|---|
+| MP3, AAC (M4A), Opus, Ogg Vorbis | Avec perte | Débit de 96 à 320 kb/s |
+| FLAC, ALAC (M4A) | Sans perte | — |
+| WAV, AIFF | Non compressé (PCM 16 bits) | — |
+
+L'application signale les conversions qui n'apportent rien (avec perte → sans perte) ou qui dégradent la qualité (avec perte → avec perte).
+
 ## Stack
 
 - [Vite](https://vite.dev/) + TypeScript, sans framework
